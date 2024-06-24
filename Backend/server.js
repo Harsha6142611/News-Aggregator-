@@ -58,7 +58,7 @@ mongoose
   .connect(
     // "mongodb+srv://siddu:8Mc6NbwDyqWKCw9I@newsdb.nljuhxi.mongodb.net/?retryWrites=true&w=majority&appName=newsdb"
     // "mongodb+srv://ambatisaiteja123:ambatisaiteja@cluster0.zbh05q5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
-    "mongodb+srv://ambatisaiteja123:ambatisaiteja@cluster0.zbh05q5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+    "mongodb+srv://pasupulaharsha70066:Harsha7006@cluster0.xaflbhw.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
   )
   .then(() => {
     console.log("Connected to database");

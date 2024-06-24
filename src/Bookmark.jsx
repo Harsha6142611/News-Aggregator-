@@ -15,7 +15,7 @@ const Bookmark = () => {
   useEffect(() => {
     const showBookmarks = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/news/articles");
+        const response = await axios.get("https://news-aggregator-7xba.onrender.com/news/articles");
         const currentUserId = localStorage.getItem("uid");
         const data = response.data;
         
@@ -34,7 +34,7 @@ const Bookmark = () => {
 
   const deleteArticle = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/news/articles/${id}`);
+      await axios.delete(`https://news-aggregator-7xba.onrender.com/news/articles/${id}`);
       setNewsList(newsList.filter((article) => article._id !== id));
       alert("Article Deleted");
       console.log("Article Deleted -", id);

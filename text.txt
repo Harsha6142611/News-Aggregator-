@@ -1,0 +1,180 @@
+// import React, { useState } from 'react';
+// import { auth } from './firebase';
+// import { signInWithEmailAndPassword } from 'firebase/auth';
+// import { Link, useNavigate } from 'react-router-dom';
+// import './Login.css';
+
+// let userid;
+
+// const Login = () => {
+//   const [email, setEmail] = useState('');
+//   const [password, setPassword] = useState('');
+//   const [error, setError] = useState(null); // State for error message
+//   const navigate = useNavigate();
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     try {
+//       const userCredential = await signInWithEmailAndPassword(auth, email, password);
+//       const user=userCredential.user;
+//       userid=user.uid;
+//       console.log("User Id:",userid);
+//       console.log(user.accessToken)
+//       localStorage.setItem('uid',user.uid);
+//       localStorage.setItem('token', user.accessToken);
+//       localStorage.setItem('user', JSON.stringify(user));
+//       navigate("/general");
+//     } catch (error) {
+//       console.error(error);
+//       setError("Incorrect email or password"); // Set error message
+//     }
+//   }
+
+//   return (
+//     <div className="black-box">
+//       <h1 style={{ color: 'skyblue' }}>Login Page</h1>
+//       {error && (
+//         <div className="error-popup">
+//           {error}
+//           <button onClick={() => setError(null)}>OK</button>
+//         </div>
+//       )}
+//       <form onSubmit={handleSubmit} className='login-form'>
+//         <input
+//           type="email"
+//           placeholder="Your Email"
+//           required
+//           value={email}
+//           onChange={(e) => setEmail(e.target.value)}
+//         />
+//         <input
+//           type="password"
+//           placeholder="Your Password"
+//           required
+//           value={password}
+//           onChange={(e) => setPassword(e.target.value)}
+//         />
+//         <button type="submit" className='login-button'>Login</button>
+//       </form>
+//       <p>Need to Signup? <Link to="/">Create Account</Link></p>
+//     </div>
+//   )
+// }
+
+// export default Login;
+// export {userid};
+
+
+import React, { useState } from "react";
+import Dropdown from "react-bootstrap/Dropdown";
+import Logout from "./Logout";
+import "./header.css";
+
+const Header = () => {
+  const [search, setSearch] = useState("");
+  const [query, setQuery] = useState("");
+
+  const handleSearchChange = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setQuery(search);
+  };
+
+  return (
+    <>
+      <header className="bg-blue-500 text-white py-4 w-full sticky top-0 z-50">
+        <nav className="flex items-center justify-between p-5">
+          <ul className="flex items-center space-x-4">
+            <li>
+              <a href="/general" className="text-white hover:underline">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="/business" className="text-white hover:underline">
+                Business
+              </a>
+            </li>
+            <li>
+              <a href="/entertainment" className="text-white hover:underline">
+                Entertainment
+              </a>
+            </li>
+            <li>
+              <a href="/health" className="text-white hover:underline">
+                Health
+              </a>
+            </li>
+            <li>
+              <a href="/science" className="text-white hover:underline">
+                Science
+              </a>
+            </li>
+            <li>
+              <a href="/sports" className="text-white hover:underline">
+                Sports
+              </a>
+            </li>
+            <li>
+              <a href="/technology" className="text-white hover:underline">
+                Technology
+              </a>
+            </li>
+          </ul>
+
+          <Dropdown>
+            <Dropdown.Toggle id="dropdown-basic">Languages</Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="/language/cn">Chinese</Dropdown.Item>
+              <Dropdown.Item href="/language/jp">Japanese</Dropdown.Item>
+              <Dropdown.Item href="/language/ru">Russian</Dropdown.Item>
+              <Dropdown.Item href="/language/si">Slovenian</Dropdown.Item>
+              <Dropdown.Item href="/language/ch">Swiss</Dropdown.Item>
+              <Dropdown.Item href="/language/ch">Italian</Dropdown.Item>
+              <Dropdown.Item href="/language/th">Thai</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+
+          <form onSubmit={handleSubmit} className="flex flex-row">
+            <input
+              type="text"
+              id="query"
+              placeholder="Enter ..."
+              className="rounded pl-2 border-2 text-black"
+              value={search}
+              onChange={handleSearchChange}
+            ></input>
+            <button
+              type="submit"
+              id="subtn"
+              className="p-1 border-1 ml-4 rounded-1 hover:bg-blue-800 hover:border-0"
+            >
+              Search
+            </button>
+          </form>
+
+          <Dropdown>
+            <Dropdown.Toggle id="dropdown-basic">Countries</Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item href="/language/us">USA</Dropdown.Item>
+              <Dropdown.Item href="/language/in">India</Dropdown.Item>
+              <Dropdown.Item href="/language/ca">Canada</Dropdown.Item>
+              <Dropdown.Item href="/language/nz">New Zealand</Dropdown.Item>
+              <Dropdown.Item href="/language/sa">South Africa</Dropdown.Item>
+              <Dropdown.Item href="/language/au">Australia</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
+          <a href="/news/form" className="bg-blue-400 p-1 rounded">
+            Feedback
+          </a>
+          <Logout />
+        </nav>
+      </header>
+    </>
+  );
+};
+
+export default Header;

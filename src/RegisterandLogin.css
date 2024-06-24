@@ -1,0 +1,295 @@
+.rimg {
+  opacity: 70%;
+}
+
+.fimg {
+  background: url('https://imgs.search.brave.com/TFZtm0B4fC0O4-KwgZ5mXKMa3qNvwl8oSGM5M3cwp4M/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZXMudW5zcGxhc2gu/Y29tL3Bob3RvLTE1/NjYzNzgyNDY1OTgt/NWIxMWEwZDQ4NmNj/P3E9ODAmdz0xMDAw/JmF1dG89Zm9ybWF0/JmZpdD1jcm9wJml4/bGliPXJiLTQuMC4z/Jml4aWQ9TTN3eE1q/QTNmREI4TUh4elpX/RnlZMmg4Tkh4OGJt/VjNjM0JoY0dWeWZH/VnVmREI4ZkRCOGZI/d3c');
+  width: 940px;
+  height: 100vh;
+  opacity: 30%;
+  background-position: center;
+  background-size: cover;
+}
+
+.items {
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  gap: 15px;
+  position: absolute;
+  top: 50%;
+  left: 22%;
+  color: rgb(0, 67, 126);
+  transform: translate(-50%, -50%);
+  font-size: 40px;
+  text-align: center;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.items li {
+  opacity: 0;
+}
+
+.items li:nth-child(1) {
+  animation: fadeIn 1s ease forwards 0.5s;
+}
+
+.items li:nth-child(2) {
+  animation: fadeIn 1s ease forwards 1s;
+}
+
+.items li:nth-child(3) {
+  animation: fadeIn 1s ease forwards 1.5s;
+}
+
+.items li:nth-child(4) {
+  animation: fadeIn 1s ease forwards 2s;
+}
+
+.items li:nth-child(5) {
+  animation: fadeIn 1s ease forwards 2.5s;
+}
+
+.items li:nth-child(6) {
+  animation: fadeIn 1s ease forwards 3s;
+}
+
+.items li:nth-child(7) {
+  animation: fadeIn 1s ease forwards 3.5s;
+}
+
+.items li:nth-child(8) {
+  animation: fadeIn 1s ease forwards 4s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.topics {
+  font-size: 40px;
+  opacity: 100% !important;
+}
+
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url('https://i.pinimg.com/originals/83/e8/33/83e833427cf394ff2eba1e96e1813647.gif');
+  background-size: cover;
+  background-position: center;
+}
+
+.square {
+  width: 50%;
+  background-color: #3b82f6;
+  color: white;
+  display: flex;
+  padding-left: 100px;
+  align-items: center;
+}
+
+.rectangle {
+  width: 500px;
+  background: transparent;
+  display: flex;
+  margin: 30px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.inner-div {
+  max-width: 400px;
+  text-align: center;
+  padding-right: 50px;
+}
+
+.heading {
+  font-size: 44px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.profile {
+  background: url('https://cdnl.iconscout.com/lottie/premium/thumb/greeting-man-4648079-3870380.gif');
+  width: 275px;
+  height: 275px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  margin-top: 50px;
+}
+
+.App:hover {
+  border: rgb(13, 130, 247) 3px solid;
+}
+
+.App {
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border: rgb(149, 198, 231) solid 3px;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.square {
+  height: 55%;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.pointer {
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+}
+
+.activeColor {
+  background-color: #3b82f6;
+  color: white;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  color: white;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  border: 3px solid #ccc;
+  background: transparent;
+}
+
+input[type='email']::placeholder, input[type="password"]::placeholder {
+  color: white;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3b82f6;
+  color: white;
+  padding: 2px;
+  max-height: max-content;
+  margin-bottom: 3px;
+}
+
+p {
+  margin-top: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+p:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: xx-large;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .fimg {
+    width: 100%;
+  }
+
+  .items {
+    left: 50%;
+  }
+
+  .square {
+    width: 70%;
+    padding-left: 50px;
+  }
+
+  .inner-div {
+    padding-right: 0;
+  }
+
+  .profile {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .items {
+    font-size: 30px;
+    left: 50%;
+  }
+
+  .square {
+    flex-direction: column;
+    padding-left: 0;
+    align-items: center;
+    text-align: center;
+  }
+
+  .rectangle {
+    width: 100%;
+    margin: 0;
+  }
+
+  .inner-div {
+    padding: 0;
+  }
+
+  .profile {
+    width: 150px;
+    height: 150px;
+  }
+
+  .heading {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .items {
+    font-size: 20px;
+    left: 50%;
+  }
+
+  .profile {
+    width: 120px;
+    height: 120px;
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  .App {
+    font-size: 16px;
+    padding: 10px;
+  }
+}

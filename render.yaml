@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: frontend
+    env: node
+    buildCommand: npm install
+    startCommand: npm run dev
+    envVars:
+      - key: NODE_ENV
+        value: production
+
+  - type: web
+    name: backend
+    env: node
+    buildCommand: cd Backend && npm install
+    startCommand: cd Backend && node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production

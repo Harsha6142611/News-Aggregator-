@@ -42,7 +42,7 @@ const Query = ({ query }) => {
           userId: local_id,
         };
         const response = await axios.post(
-          'http://localhost:3000/news/articles',
+          'https://news-aggregator-7xba.onrender.com/news/articles',
           newswithid
         );
         setIsSaved(true);

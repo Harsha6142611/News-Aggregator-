@@ -254,7 +254,7 @@ const NewsCard = ({ news }) => {
       };
       console.log(newswithid);
       const response = await axios.post(
-        "http://localhost:3000/news/articles",
+        "https://news-aggregator-7xba.onrender.com/news/articles",
         newswithid
       );
       console.log("Saving article with id ", local_id);
